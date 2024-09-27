@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height based on your preference */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(100px); /* Blurs the image */
+    -webkit-filter: blur(5px); /* For Safari */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.logo {
+    width: 100px; /* Adjust the size of the logos as needed */
+    height: auto;
+}
+
+.institute-name {
+    text-align: center;
+    flex-grow: 1; /* This allows the institute name to grow and take up the space between the logos */
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Vision and Mission Section */
+.vision-mission-section {
+    padding: 40px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.vision, .mission {
+    margin-bottom: 40px;
+}
+
+.vision h2, .mission h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.vision p, .mission ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.mission ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    text-align: left; /* Align mission points to the left */
+}
+
+.mission ul li {
+    margin-bottom: 10px;
+}
+/* Photo Gallery Section */
+.photo-gallery-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.photo-gallery-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Zoom-in effect on hover */
+}
+/* Registration Section */
+.registration-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.registration-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.registration-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #218838;
+}
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faculty, .executive-members {
+    margin-bottom: 40px;
+}
+
+.faculty-member, .member {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.faculty-member img, .member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 10px;
+}
+
+.faculty-member p, .member p {
+    font-size: 18px;
+}
+/* Announcements Section */
+.announcements-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.announcements-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.announcement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcement {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.announcement h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.announcement .date {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center; /* Center align the links */
+    gap: 20px; /* Space between the links */
+}
+
+.navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Padding around the links */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.navbar a:hover {
+    background-color: #555; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
