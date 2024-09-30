@@ -1,13 +1,64 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f1de; /* Sandalwood as the background */
 }
 
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f4f1de; /* Sandalwood background */
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.institute-name {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0000; /* Dark red for institute name */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #8b0000; /* Dark red for navbar */
+    padding: 10px 0;
+    height: fit-content;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white; /* White text on dark red */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #754f1c; /* Sandalwood hover effect */
+    border-radius: 5px;
+}
+
+/* Banner Section */
 .banner-container {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust height based on your preference */
+    height: 400px;
     overflow: hidden;
 }
 
@@ -15,8 +66,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(100px); /* Blurs the image */
-    -webkit-filter: blur(5px); /* For Safari */
 }
 
 .banner-text {
@@ -24,7 +73,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: white; /* White text over the banner */
     text-align: center;
 }
 
@@ -39,222 +88,199 @@ body {
     margin: 0;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f1f1f1;
-}
-
-.logo {
-    width: 100px; /* Adjust the size of the logos as needed */
-    height: auto;
-}
-
-.institute-name {
-    text-align: center;
-    flex-grow: 1; /* This allows the institute name to grow and take up the space between the logos */
-    font-size: 24px;
-    font-weight: bold;
-}
-/* Vision and Mission Section */
+/* Vision and Mission */
 .vision-mission-section {
     padding: 40px 20px;
-    background-color: #fafafa;
+    background-color: #f4f1de; /* Sandalwood background */
     text-align: center;
-}
-
-.vision, .mission {
-    margin-bottom: 40px;
+    color: #8b0000; /* Dark red for text */
 }
 
 .vision h2, .mission h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.vision p, .mission ul {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+    color: #8b0000; /* Dark red for headings */
 }
 
 .mission ul {
-    list-style-type: disc;
     padding-left: 40px;
-    text-align: left; /* Align mission points to the left */
+    color: #333; /* Text color for readability */
 }
-
-.mission ul li {
-    margin-bottom: 10px;
-}
-/* Photo Gallery Section */
-.photo-gallery-section {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.photo-gallery-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.gallery-item {
-    width: 100%;
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Full width of the parent */
+    margin: auto; /* Center horizontally */
     overflow: hidden;
+    display: flex; /* Align items */
+    justify-content: center; /* Center items horizontally */
 }
 
+/* Carousel Slide */
+.carousel-slide {
+    display: flex; /* Align images in a row */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Gallery Item */
+.gallery-item {
+    min-width: 500px; /* Fixed width for the image */
+    height: 500px; /* Fixed height for the image */
+    box-sizing: border-box;
+    display: flex; /* Center content inside */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Responsive Image Styling */
 .gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    width: 100%; /* Image fills the width of its container */
+    height: 100%; /* Image fills the height of its container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    border-radius: 8px; /* Rounded corners */
 }
 
-.gallery-item img:hover {
-    transform: scale(1.1); /* Zoom-in effect on hover */
+/* Previous and Next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 10;
 }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Additional styling for the section */
+.photo-gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content vertically */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the title */
+}
+
 /* Registration Section */
 .registration-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f4f1de; /* Sandalwood background */
 }
 
 .registration-section h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
+    color: #8b0000; /* Dark red for heading */
 }
-
-.registration-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.register-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background-color: #28a745;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.register-button:hover {
-    background-color: #218838;
-}
-/* Team Section */
-.team-section {
-    padding: 40px 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-}
-
 .team-section h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
+    color: #8b0000; /* Dark red for heading */
+}
+.register-button {
+    background-color: #8b0000; /* Dark red button */
+    color: white; /* White text on button */
+    padding: 15px 30px;
+    border-radius: 5px;
 }
 
-.faculty, .executive-members {
-    margin-bottom: 40px;
+.register-button:hover {
+    background-color: #a0522d; /* Slightly lighter sandalwood on hover */
 }
 
-.faculty-member, .member {
-    display: inline-block;
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    background-color: #f4f1de; /* Sandalwood background */
     text-align: center;
-    margin: 20px;
 }
 
-.faculty-member img, .member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%; /* Circular photo */
-    margin-bottom: 10px;
+.faculty {
+    display: flex; /* Make the faculty members side by side */
+    justify-content: space-between; /* Space between the two members */
+    gap: 20px; /* Add some space between the two members */
+    padding: 10px;
 }
 
-.faculty-member p, .member p {
-    font-size: 18px;
+.faculty-member {
+    flex: 1; /* Allow equal space for both members */
+    background-color: #f9f9f9; /* Optional: Background color */
+    padding: 15px; /* Add padding inside each faculty member box */
+    border: 1px solid #ccc; /* Optional: Add border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    text-align: left; /* Align text to the left */
 }
-/* Announcements Section */
+
+/* Announcements */
 .announcements-section {
     padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
+    background-color: #f4f1de; /* Sandalwood background */
 }
 
 .announcements-section h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.announcement-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    color: #8b0000; /* Dark red for announcement heading */
 }
 
 .announcement {
-    background-color: #f9f9f9;
+    background-color: white; /* White background for announcements */
     padding: 20px;
     border-radius: 8px;
-    text-align: left;
 }
 
 .announcement h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    color: #8b0000; /* Dark red for announcement title */
 }
 
 .announcement .date {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
+    color: #8b0000; /* Dark red for date */
+}
+/* Container for the announcement content */
+.announcement-content {
+    display: flex; /* Align text and image side by side */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Space between text and image */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Border around the announcement */
+    border-radius: 10px; /* Optional: Rounded corners */
+    background-color: #f9f9f9;
+    /* Optional: Light background for the announcement */
+}
+/* Styling for the text section */
+.announcement-text {
+    flex: 1; /* Let the text take the available width */
 }
 
-.announcement p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-/* Navigation Bar */
-.navbar {
-    background-color: #333; /* Dark background color */
-    padding: 10px 0;
+/* Styling for the image */
+.announcement-image {
+    flex: 0 0 350px; /* Fixed width for the image */
+    height: 150px; /* Fixed height for the image */
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: center; /* Center align the links */
-    gap: 20px; /* Space between the links */
+.announcement-image img {
+    width: 100%; /* Make image fit the width of its container */
+    height: 100%; /* Make image fit the height of its container */
+    object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
 }
 
-.navbar a {
-    color: white; /* White text color */
-    text-decoration: none; /* No underline */
-    font-size: 18px; /* Font size */
-    padding: 10px 15px; /* Padding around the links */
-    transition: background-color 0.3s ease; /* Transition effect */
-}
-
-.navbar a:hover {
-    background-color: #555; /* Darker background on hover */
-    border-radius: 5px; /* Rounded corners on hover */
-}
 
