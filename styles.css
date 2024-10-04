@@ -7,51 +7,108 @@ body {
 }
 
 /* Header */
+/* Basic header styling with Flexbox */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     background-color: #f4f1de; /* Sandalwood background */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
 }
 
+/* Responsive logo size with flex-shrink set to 0 to avoid shrinking */
 .logo {
-    width: 100px;
+    width: 60px;  /* Smaller size for mobile */
     height: auto;
+    flex-shrink: 0; /* Prevent logo from shrinking too much */
 }
 
+/* Center the institute name and make it responsive */
 .institute-name {
     text-align: center;
-    flex-grow: 1;
-    font-size: 24px;
+    flex-grow: 1; /* Allow the name to grow to fill space */
+    font-size: 16px; /* Smaller font size for mobile */
     font-weight: bold;
     color: #8b0000; /* Dark red for institute name */
+    padding: 0 10px; /* Add some horizontal padding */
+}
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Keeps the header above other content */
+        background-color: white; /* Background to make it stand out */
+    }
+    
+    .navbar {
+        position: fixed;
+        /* Adjust based on the height of your header */
+        left: 0;
+        width: 100%;
+        z-index: 999; /* Keeps the navbar just below the header */
+    }
+
+    /* To prevent the content from being hidden under the fixed header and navbar */
+    body {
+        padding-top: 110px; /* Adjust based on the combined height of header and navbar */
+    }
+/* Medium screen sizes (Tablets) */
+@media (min-width: 576px) {
+    .logo {
+        width: 80px;  /* Slightly larger for small devices */
+    }
+    .institute-name {
+        font-size: 20px; /* Adjust text size for small devices */
+    }
 }
 
-/* Navigation Bar */
+/* Large screen sizes (Tablets/Laptops) */
+@media (min-width: 768px) {
+    .logo {
+        width: 100px;  /* Larger size for medium devices */
+    }
+    .institute-name {
+        font-size: 24px; /* Adjust text size for medium devices */
+    }
+}
+
+/* Extra large screen sizes (Laptops/Desktops) */
+@media (min-width: 992px) {
+    .logo {
+        width: 120px;  /* Larger size for desktops */
+    }
+    .institute-name {
+        font-size: 28px; /* Adjust text size for desktops */
+    }
+}
+
 .navbar {
-    background-color: #8b0000; /* Dark red for navbar */
+    background-color: #8b0000;
     padding: 10px 0;
-    height: fit-content;
 }
-
 .navbar-container {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
-
 .navbar a {
-    color: white; /* White text on dark red */
+    color: white;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
     transition: background-color 0.3s ease;
 }
-
 .navbar a:hover {
-    background-color: #754f1c; /* Sandalwood hover effect */
+    background-color: #754f1c;
     border-radius: 5px;
+}
+@media (max-width: 991.98px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 /* Banner Section */
@@ -105,6 +162,7 @@ body {
 .mission ul {
     padding-left: 40px;
     color: #333; /* Text color for readability */
+
 }
 /* Carousel Container */
 .carousel-container {
@@ -271,10 +329,7 @@ h2 {
 }
 
 /* Styling for the image */
-.announcement-image {
-    flex: 0 0 350px; /* Fixed width for the image */
-    height: 150px; /* Fixed height for the image */
-}
+
 
 .announcement-image img {
     width: 100%; /* Make image fit the width of its container */
@@ -283,4 +338,11 @@ h2 {
     border-radius: 8px; /* Optional: Rounded corners for the image */
 }
 
-
+.card-body h3{
+    color: #8b0000;
+    font-size: 15 px;
+    font-weight: bold;
+}
+foot-link > a{
+    color: #8b0000;
+}
