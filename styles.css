@@ -35,25 +35,16 @@ body {
 }
     .header {
         position: fixed;
-        top: 0;
+        top: 100px;
         left: 0;
         width: 100%;
         z-index: 1000; /* Keeps the header above other content */
         background-color: white; /* Background to make it stand out */
     }
     
-    .navbar {
-        position: fixed;
-        /* Adjust based on the height of your header */
-        left: 0;
-        width: 100%;
-        z-index: 999; /* Keeps the navbar just below the header */
-    }
-
+    
     /* To prevent the content from being hidden under the fixed header and navbar */
-    body {
-        padding-top: 110px; /* Adjust based on the combined height of header and navbar */
-    }
+   
 /* Medium screen sizes (Tablets) */
 @media (min-width: 576px) {
     .logo {
