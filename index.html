@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/kanithamizh_logo.jpg" type="image/png">
     <title>கணித்தமிழ் மன்றம் </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -10,47 +11,51 @@
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-  <img src="./images/clg_logo.jpg" alt="College Logo 1" class="logo">
-  <div class="ins-name">
+  <header class="head-1">
+    <div class="header">
+    <img src="./images/clg_logo.jpg" alt="College Logo 1" class="logo">
+    <div class="ins-name">
       <h1 class="institute-name">கணித்தமிழ் மன்றம்</h1>
       <h1 class="institute-name">தந்தை பெரியார் அரசு பொறியியல் கல்லூரி <br> வேலூர் </h1></div>
-  <img src="./images/kanithamizh_logo.jpg" alt="College Logo 2" class="logo">
-</header>  
-    <!-- Navigation Bar -->
+    <img src="./images/kanithamizh_logo.jpg" alt="College Logo 2" class="logo">
+    </div>
     <nav class="navbar navbar-expand-lg" style="background-color: #8b0000; padding: 10px 0;">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars" style="color: white; font-size: 24px;"></i>
-              </button>
-              
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars" style="color: white; font-size: 24px;"></i>
+          </button>
+          
           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <div class="navbar-container">
-              <a href="#banner" class="nav-link">முகப்பு</a>
-              <a href="#vision-mission" class="nav-link">நோக்கம்</a>
-              <a href="#photo-gallery" class="nav-link">நிகழ்ச்சிகள்</a>
-              <a href="#registration" class="nav-link">மன்றத்தில் சேர</a>
-              <a href="#team" class="nav-link">ஒருங்கிணைப்பாளர்கள்</a>
-              <a href="#announcements" class="nav-link">அறிவிப்புகள்</a>
-            </div>
+              <div class="navbar-container">
+                  <a href="#banner" class="nav-link" >முகப்பு</a>
+                  <a href="#vision-mission" class="nav-link" >நோக்கம்</a>
+                  <a href="#photo-gallery" class="nav-link" >நிகழ்ச்சிகள்</a>
+                  <a href="#registration" class="nav-link" >மன்றத்தில் சேர</a>
+                  <a href="#team" class="nav-link" >ஒருங்கிணைப்பாளர்கள்</a>
+                  <a href="#announcements" class="nav-link" >அறிவிப்புகள்</a>
+              </div>
           </div>
-        </div>
-      </nav>
-
+      </div>
+  </nav>
+  
+</header>  
+   
+<div class="main-content">
+<section>
     <!-- Header Section with Background Image and Call-to-Action Button -->
 <div class="homepage-banner text-center d-flex align-items-center justify-content-center" id="banner" style="background-image: url('./images/header img.jpg'); background-size: cover; background-position: center; height: 100vh; position: relative;">
     <div class="overlay w-100 h-100 position-absolute" style="background-color: rgba(0, 0, 0, 0.5);"></div> <!-- Dark overlay -->
     <div class="container position-relative text-white">
-        <h1 class="display-4" style="font-weight: bold;">கணித்தமிழ் மன்றம்</h1>
+        <h1 class="display-4" style="font-weight: bold; color: #eee7e7;">கணித்தமிழ் மன்றம்</h1>
         <p class="lead">இணையத்தில் தமிழின் பங்களிப்பை வளப்படுத்த தொடக்கபட்ட அமைப்பு</p>
         <a href="#registration" class="btn btn-primary btn-lg mt-3" style="background-color: #8b0000;">மன்றதில் சேர </a>
     </div>
 </div>
-
+</section>
     <!-- Vision and Mission Sections -->
 <section class="vision-mission-section" id="vision-mission">
     <div class="mission">
-        <h2>நோக்கம்</h2>
+        <h2 class="display-2">நோக்கம்</h2>
         
         <p style="color: black;">தந்தை பெரியார் அரசு பொறியியல் கல்லூரியின்  கணித்தமிழ்ப் பேரவையானது, இணையத்தில் தமிழின் பங்களிப்பை வளப்படுத்துதல், வலுப்படுத்துதல், மற்றும் தமிழ் பயன்பாட்டு மென்பொருள்கள் உருவாக்கத்தை ஊக்குவிக்க தொடக்க பட்ட ஒரு அமைப்பு.
 
@@ -60,75 +65,74 @@
 </section>
 <!-- Photo Gallery Section (Carousel) -->
 <div id="photo-gallery">
-    <h2 class="title -section text-center my-5 fs-1" style="color: #8b0000; font-weight: bold;">நிகழ்ச்சிகள்</h2>
-    <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 7"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./images/event3.jpg" class="d-block w-100" alt="couple">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/tamil-elu.jpg" class="d-block w-100" alt="dog">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/thodakavizha.jpg" class="d-block w-100" alt="family">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/pic1.jpg" class="d-block w-100" alt="family">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/pic2.jpg" class="d-block w-100" alt="family">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/pic3.jpg" class="d-block w-100" alt="family">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/pic4.jpg" class="d-block w-100" alt="family">
-          </div>
-          <div class="carousel-item">
-            <img src="./images/pic5.jpg" class="d-block w-100" alt="family">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <h2 class="title -section text-center my-5 fs-1 display-2" style="color: #8b0000; font-weight: bold;">நிகழ்ச்சிகள்</h2>
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+          aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+          aria-label="Slide 7"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/event3.jpg" class="d-block w-100" alt="Event 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/tamil-elu.jpg" class="d-block w-100" alt="Tamil Elu Event">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/thodakavizha.jpg" class="d-block w-100" alt="Thodakavizha Event">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/pic1.jpg" class="d-block w-100" alt="Pic 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/pic2.jpg" class="d-block w-100" alt="Pic 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/pic3.jpg" class="d-block w-100" alt="Pic 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/pic4.jpg" class="d-block w-100" alt="Pic 4">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/pic5.jpg" class="d-block w-100" alt="Pic 5">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
+</div>
+
 <!-- Registration Form Section -->
 <!-- Registration Section -->
 <section id="registration" class="registration-section text-center py-5">
-    <h2>மன்றத்தில் சேர</h2>
+    <h2 class="display-2">மன்றத்தில் சேர</h2>
     <p>கணித்தமிழ் மன்றதில் உறுபினராக சேர விரும்பினால் </p>
     <a href="https://forms.gle/CuzW2726iFUz2oTj6" class="btn btn-primary btn-lg" style="background-color: #8b0000;">பதிவு செய்</a>
 </section>
 
 <!-- Faculty In-Charge and Executive Members Section -->
 <section class="team-section py-5" id="team">
-    <h2 class="text-center">ஒருங்கிணைப்பாளர்கள்</h2>
+    <h2 class=" fs-1 fs-md-2 fs-lg-3  container ">ஒருங்கிணைப்பாளர்கள்</h2>
     
     <!-- Faculty In-Charge -->
     <div class="container">
@@ -151,7 +155,7 @@
 
 <!-- Announcements Section -->
 <section class="announcements-section py-5" id="announcements">
-    <h2 class="text-center">அறிவிப்புகள்</h2>
+    <h2 class="text-center display-2">அறிவிப்புகள்</h2>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -193,7 +197,7 @@
         
   
         <div class="col mb-3">
-          <h5 class="fs-4"> copyrights @tpgit</h5>
+          
 
           <ul class="nav flex-column foot-link">
               <a href="#banner" class="nav-link" style="color: #ca6d6d;">முகப்பு</a>
@@ -202,13 +206,27 @@
               <a href="#registration" class="nav-link" style="color: #ca6d6d;">மன்றத்தில் சேர</a>
               <a href="#team" class="nav-link" style="color: #ca6d6d;">ஒருங்கிணைப்பாளர்கள்</a>
               <a href="#announcements" class="nav-link" style="color: #ca6d6d;">அறிவிப்புகள்</a>
+              <h5 style="color: #702d2d; "> copyrights @tpgit</h5>
             </div>
+            
         </div>
       </footer>
     </div>
   </div>
-
-
+</div>
+  
+  <script>
+    
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+      let navbar = document.querySelector('.navbar-collapse');
+      let bsCollapse = new bootstrap.Collapse(navbar, {
+        toggle: false
+      });
+      bsCollapse.hide(); // Manually close the navbar
+    });
+  });
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>

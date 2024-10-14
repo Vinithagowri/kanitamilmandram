@@ -1,3 +1,6 @@
+section {
+    scroll-margin-top: 250px; /* Adjust this to the height of the header */
+  }
 
 body {
     margin: 0;
@@ -33,14 +36,14 @@ body {
     color: #8b0000; /* Dark red for institute name */
     padding: 0 10px; /* Add some horizontal padding */
 }
-    .header {
+    .head-1 {
         position: fixed;
-        top: 100px;
+        top: 0px;
         left: 0;
         width: 100%;
         z-index: 1000; /* Keeps the header above other content */
-        background-color: white; /* Background to make it stand out */
-    }
+        /* background-color: white; /* Background to make it stand out */
+    } 
     
     
     /* To prevent the content from being hidden under the fixed header and navbar */
@@ -91,7 +94,8 @@ body {
     transition: background-color 0.3s ease;
 }
 .navbar a:hover {
-    background-color: #754f1c;
+    background-color: #612d1d;
+    color: #f4f1de;
     border-radius: 5px;
 }
 @media (max-width: 991.98px) {
@@ -188,7 +192,17 @@ body {
     object-fit: cover; /* Maintain aspect ratio and cover the entire area */
     border-radius: 8px; /* Rounded corners */
 }
-
+.carousel-item {
+    height: 50vh; /* Set the height of each slide. Adjust the value as needed (80% of viewport height) */
+    min-height: 400px; /* Optional: minimum height to ensure it doesn’t become too small on smaller screens */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the area without stretching, but it may crop */
+  }
+  
 /* Previous and Next buttons */
 .prev, .next {
     cursor: pointer;
